@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VeloPOS Keygen</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0A1020">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Velo Keygen">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+:root{--bg:#F2F5FB;--sf:#fff;--sf2:#EAF0FA;--tx:#1B2536;--mu:#58677F;--ln:#D8E0EE;--ac:#0B63F6;--ok:#0E9F6E;--bad:#D92D4B;--wn:#B7791F}
+[data-theme=dark]{--bg:#0A1020;--sf:#121A2E;--sf2:#1A2542;--tx:#EAF0FA;--mu:#9DABC4;--ln:#25335A;--ac:#2E7BFF;--ok:#34D399;--bad:#FB7185;--wn:#FBBF24}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Sinhala","Iskoola Pota",sans-serif}
+body{min-height:100dvh;padding:env(safe-area-inset-top) 0 calc(74px + env(safe-area-inset-bottom))}
+.mono{font-family:ui-monospace,"SF Mono",Consolas,"Roboto Mono",monospace}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;gap:12px;padding:14px 0}
+.tile{background:#fff;border-radius:14px;display:grid;place-items:center;box-shadow:0 4px 16px rgba(11,99,246,.25)}
+.tile img{display:block;width:100%;height:auto}
+header .tile{width:48px;height:48px;padding:6px}
+header h1{font-size:19px;line-height:1.2;margin:0;font-weight:800;letter-spacing:-.01em}
+header small{color:var(--mu);font-size:13px}
+.grow{flex:1}
+h2{font-size:22px;margin:8px 0 14px;font-weight:800;letter-spacing:-.01em}
+.card{background:var(--sf);border:1px solid var(--ln);border-radius:20px;padding:18px;margin-bottom:14px}
+label{display:block;font-size:14px;font-weight:600;margin:14px 0 6px}
+label:first-child{margin-top:0}
+input,select,textarea{width:100%;min-height:50px;padding:12px 14px;border-radius:14px;border:1.5px solid var(--ln);background:var(--bg);color:var(--tx);font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 25%,transparent)}
+textarea{min-height:110px;resize:vertical;font-size:13px}
+.hint{font-size:13px;color:var(--mu);margin-top:6px}
+.hint.wn{color:var(--wn)}.hint.bad{color:var(--bad)}
+button{font:inherit;cursor:pointer;min-height:50px;padding:0 18px;border-radius:14px;border:1.5px solid var(--ln);background:var(--sf2);color:var(--tx);font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+button:active{transform:scale(.98)}
+button:focus-visible,.nav button:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.pri{background:var(--ac);border-color:var(--ac);color:#fff;width:100%;margin-top:18px;font-size:17px;min-height:54px}
+.wa{background:#1FB655;border-color:#1FB655;color:#04210F}
+.danger{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 45%,transparent);background:transparent}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.keycard{border:2px solid transparent;border-radius:22px;padding:18px;margin-bottom:14px;background:linear-gradient(var(--sf),var(--sf)) padding-box,linear-gradient(135deg,#0B63F6,#00E5FF) border-box;box-shadow:0 10px 40px rgba(0,160,255,.18)}
+.keycard .top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px;font-weight:700}
+.badge{padding:4px 10px;border-radius:99px;background:var(--sf2);font-size:13px;font-weight:700}
+.badge.ok{color:var(--ok)}.badge.bad{color:var(--bad)}.badge.wn{color:var(--wn)}
+.key{margin:14px 0 4px;padding:14px;border-radius:14px;background:var(--bg);font-size:15px;line-height:1.7;font-weight:700;overflow-wrap:anywhere;user-select:all;-webkit-user-select:all;text-align:center;letter-spacing:.02em}
+.item{display:flex;gap:10px;align-items:center;padding:12px 0;border-top:1px solid var(--ln)}
+.item:first-child{border-top:0}
+.item .t{flex:1;min-width:0}.item b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sub{font-size:13px;color:var(--mu);overflow-wrap:anywhere}
+.item button{min-height:44px;min-width:44px;padding:0 10px}
+.empty{text-align:center;color:var(--mu);padding:28px 8px}
+.nav{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--sf) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--ln);padding-bottom:env(safe-area-inset-bottom);z-index:5}
+.nav div{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.nav button{border:0;background:none;flex-direction:column;gap:2px;min-height:62px;font-size:12px;color:var(--mu);border-radius:0}
+.nav button[aria-selected=true]{color:var(--ac)}
+svg.i{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#lock{min-height:100dvh;display:grid;place-items:center;padding:24px}
+#lock .box{width:100%;max-width:420px;text-align:center}
+#lock .tile{width:112px;height:112px;margin:0 auto 18px;padding:8px;border-radius:28px}
+#lock p{color:var(--mu);margin:6px 0 20px}
+#lock input{text-align:center;margin-bottom:10px}
+pre{background:var(--bg);border:1px solid var(--ln);border-radius:14px;padding:12px;font-size:12px;overflow:auto;max-height:180px;margin:8px 0}
+#toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:var(--tx);color:var(--bg);padding:12px 18px;border-radius:14px;font-weight:700;opacity:0;pointer-events:none;transition:.2s;z-index:20;max-width:92vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}#toast.bad{background:var(--bad);color:#fff}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<section id="lock" hidden><div class="box">
+  <div class="tile"><img src="icon-192.png" alt="VeloPOS"></div>
+  <h2 id="lockTitle">Unlock</h2>
+  <p id="lockMsg"></p>
+  <input id="pw1" type="password" autocomplete="current-password" placeholder="Passphrase">
+  <input id="pw2" type="password" autocomplete="new-password" placeholder="Repeat passphrase" hidden>
+  <button class="pri" id="lockBtn">Unlock</button>
+  <div class="hint" id="lockErr" role="alert"></div>
+</div></section>
+
+<main id="app" class="wrap" hidden>
+  <header>
+    <div class="tile"><img src="mark.png" alt=""></div>
+    <div class="grow"><h1>VeloPOS Keygen</h1><small>Powered by RG</small></div>
+    <button id="lockNow" aria-label="Lock now" style="min-width:48px;padding:0"><svg class="i" viewBox="0 0 24 24"><path d="M6 11V8a6 6 0 0112 0v3M5 11h14v10H5z"/></svg></button>
+  </header>
+
+  <section id="p-gen" role="tabpanel">
+    <h2>New license</h2>
+    <div class="card">
+      <label for="shop">Shop name</label>
+      <input id="shop" autocomplete="off" placeholder="Wijaya Supercenter">
+      <label for="phone">Customer WhatsApp</label>
+      <input id="phone" inputmode="tel" autocomplete="off" placeholder="077 123 4567">
+      <label for="mid">Machine ID from POS</label>
+      <input id="mid" class="mono" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="VELO-8A4F-9C21" maxlength="14">
+      <div class="hint" id="midHint">Format: VELO-XXXX-XXXX</div>
+      <label for="plan">Plan</label>
+      <select id="plan">
+        <option value="0">Lifetime (never expires)</option>
+        <option value="1">1 year (365 days)</option>
+        <option value="2">1 month (30 days)</option>
+        <option value="3">Trial (14 days)</option>
+        <option value="4">Custom days</option>
+      </select>
+      <div id="daysBox" hidden><label for="days">Number of days</label><input id="days" type="number" inputmode="numeric" min="1" max="3650" value="90"></div>
+      <button class="pri" id="genBtn">Create activation key</button>
+    </div>
+    <div class="keycard" id="result" hidden>
+      <div class="top"><span id="resShop"></span><span class="badge" id="resBadge"></span></div>
+      <div class="key mono" id="resKey"></div>
+      <div class="row2"><button id="copyBtn">Copy key</button><button class="wa" id="waBtn">WhatsApp</button></div>
+      <button id="shareBtn" style="width:100%;margin-top:10px" hidden>Share…</button>
+    </div>
+  </section>
+
+  <section id="p-ver" role="tabpanel" hidden>
+    <h2>Check a key</h2>
+    <div class="card">
+      <label for="vKey">Activation key</label>
+      <textarea id="vKey" class="mono" spellcheck="false" placeholder="VELO-…"></textarea>
+      <label for="vMid">Machine ID</label>
+      <input id="vMid" class="mono" autocapitalize="characters" autocomplete="off" placeholder="VELO-8A4F-9C21" maxlength="14">
+      <button class="pri" id="vBtn">Check key</button>
+      <div class="hint" id="vOut" role="status" style="font-size:15px;margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section id="p-his" role="tabpanel" hidden>
+    <h2>Issued keys</h2>
+    <input id="q" type="search" placeholder="Search shop, phone or machine ID" style="margin-bottom:12px">
+    <div class="card" id="hisList"></div>
+    <div class="row2">
+      <button id="expJson">Export JSON</button><button id="expCsv">Export CSV</button>
+    </div>
+    <button id="impBtn" style="width:100%;margin-top:10px">Import JSON</button>
+    <input id="impFile" type="file" accept="application/json,.json" hidden>
+  </section>
+
+  <section id="p-set" role="tabpanel" hidden>
+    <h2>Settings</h2>
+    <div class="card">
+      <label for="theme">Theme</label>
+      <select id="theme"><option value="dark">Dark</option><option value="light">Light</option></select>
+      <button id="instBtn" style="width:100%;margin-top:14px" hidden>Install app on this device</button>
+      <div class="hint" id="iosHint" hidden>iPhone: tap Share, then “Add to Home Screen”.</div>
+    </div>
+    <div class="card">
+      <b>POS public key</b>
+      <div class="hint">Paste this into Velo POS. It can check keys but cannot create them, so it is safe to ship.</div>
+      <pre class="mono" id="pubBox"></pre>
+      <div class="row2"><button id="copyPub">Copy public key</button><button id="copySnip">Copy POS check code</button></div>
+    </div>
+    <div class="card">
+      <b>Backup</b>
+      <div class="hint">The backup file holds your private key, encrypted with your passphrase. Without it, or without the passphrase, issued keys can no longer be matched to a new vault.</div>
+      <div class="row2"><button id="bkBtn">Download backup</button><button id="rsBtn">Restore backup</button></div>
+      <input id="rsFile" type="file" accept="application/json,.json" hidden>
+    </div>
+    <div class="card">
+      <b>Danger zone</b>
+      <div class="hint">Deleting the vault removes the private key from this device. Old keys keep working only if you restore the backup.</div>
+      <button class="danger" id="wipeBtn" style="width:100%;margin-top:12px">Delete vault</button>
+    </div>
+  </section>
+
+  <nav class="nav"><div role="tablist" id="tabs"></div></nav>
+</main>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+'use strict';
+const $=s=>document.querySelector(s), S=crypto.subtle, TE=new TextEncoder();
+const el=(t,a={},...c)=>{const e=document.createElement(t);for(const k in a){if(k==='class')e.className=a[k];else if(k.startsWith('on'))e.addEventListener(k.slice(2),a[k]);else e.setAttribute(k,a[k])}c.flat().forEach(x=>e.append(x&&x.nodeType?x:document.createTextNode(x==null||x===false?'':x)));return e};
+const ICON={gen:'M21 2l-2 2m-7.6 7.6a5.5 5.5 0 11-7.8 7.8 5.5 5.5 0 017.8-7.8zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3',ver:'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3zM9 12l2 2 4-4',his:'M12 7v5l3 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z',set:'M4 7h9m4 0h3M4 17h3m4 0h9M15 5v4m-6 6v4'};
+const svg=d=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('class','i');s.setAttribute('viewBox','0 0 24 24');const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);s.append(p);return s};
+function toast(m,bad){const t=$('#toast');t.textContent=m;t.className='show'+(bad?' bad':'');clearTimeout(toast.t);toast.t=setTimeout(()=>t.className='',2800)}
+async function copy(txt,msg='Copied'){try{await navigator.clipboard.writeText(txt)}catch{const a=el('textarea',{style:'position:fixed;opacity:0'});a.value=txt;document.body.append(a);a.select();document.execCommand('copy');a.remove()}toast(msg)}
+function download(name,text,type){const a=el('a',{href:URL.createObjectURL(new Blob([text],{type})),download:name});document.body.append(a);a.click();a.remove()}
+
+/* ---------- encoding ---------- */
+const B32='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567', EPOCH=18262; /* days from 1970-01-01 to 2020-01-01 */
+const b64=u=>btoa(String.fromCharCode(...u)), unb64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+function b32e(u){let o='',v=0,b=0;for(const x of u){v=(v<<8)|x;b+=8;while(b>=5){o+=B32[(v>>>(b-5))&31];b-=5}}if(b)o+=B32[(v<<(5-b))&31];return o}
+function b32d(s){let v=0,b=0;const o=[];for(const c of s){const i=B32.indexOf(c);if(i<0)throw 0;v=(v<<5)|i;b+=5;if(b>=8){o.push((v>>>(b-8))&255);b-=8}}return Uint8Array.from(o)}
+const PLANS=['Lifetime','1 year','1 month','Trial 14d','Custom'], PDAYS=[null,365,30,14];
+const MID_RE=/^VELO-[A-Z0-9]{4}-[A-Z0-9]{4}$/;
+const fmtDate=d=>d.toISOString().slice(0,10);
+const normPhone=p=>{let d=(p||'').replace(/\D/g,'');if(d.startsWith('00'))d=d.slice(2);if(d.startsWith('0'))d='94'+d.slice(1);else if(d.length===9)d='94'+d;return d};
+async function midHash(m){return new Uint8Array(await S.digest('SHA-256',TE.encode(m.trim().toUpperCase()))).slice(0,8)}
+
+/* ---------- vault (private key encrypted with passphrase) ---------- */
+const VK='velo_keygen_vault_v2', HK='velo_keygen_history_v2';
+let vault=JSON.parse(localStorage.getItem(VK)||'null'), priv=null, pubKey=null;
+const ECP={name:'ECDSA',namedCurve:'P-256'};
+async function aesKey(pw,salt){const k=await S.importKey('raw',TE.encode(pw),'PBKDF2',false,['deriveKey']);return S.deriveKey({name:'PBKDF2',salt,iterations:250000,hash:'SHA-256'},k,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
+async function createVault(pw){
+  const kp=await S.generateKey(ECP,true,['sign','verify']);
+  const pj=await S.exportKey('jwk',kp.privateKey), pub=await S.exportKey('jwk',kp.publicKey);
+  return seal(pj,pub,pw)}
+async function seal(pj,pub,pw){
+  const salt=crypto.getRandomValues(new Uint8Array(16)), iv=crypto.getRandomValues(new Uint8Array(12));
+  const ct=new Uint8Array(await S.encrypt({name:'AES-GCM',iv},await aesKey(pw,salt),TE.encode(JSON.stringify(pj))));
+  return{v:2,salt:b64(salt),iv:b64(iv),ct:b64(ct),pub:{kty:pub.kty,crv:pub.crv,x:pub.x,y:pub.y}}}
+async function openVault(v,pw){
+  const pt=await S.decrypt({name:'AES-GCM',iv:unb64(v.iv)},await aesKey(pw,unb64(v.salt)),unb64(v.ct));
+  const pj=JSON.parse(new TextDecoder().decode(pt));
+  priv=await S.importKey('jwk',pj,ECP,false,['sign']);
+  pubKey=await S.importKey('jwk',v.pub,ECP,true,['verify'])}
+
+/* ---------- lock screen ---------- */
+let idle,wrong=0;
+function showLock(){
+  priv=null;clearTimeout(idle);$('#app').hidden=true;$('#lock').hidden=false;
+  const first=!vault;$('#pw2').hidden=!first;$('#pw1').value=$('#pw2').value='';$('#lockErr').textContent='';
+  $('#lockTitle').textContent=first?'Create your vendor passphrase':'Vendor login';
+  $('#lockMsg').textContent=first?'This passphrase encrypts your private signing key on this device. Use at least 8 characters and keep it safe: it cannot be recovered.':'Enter your passphrase to continue.';
+  $('#lockBtn').textContent=first?'Create vault':'Unlock'}
+async function doLock(){
+  const pw=$('#pw1').value, err=$('#lockErr'), btn=$('#lockBtn');err.className='hint bad';err.textContent='';
+  if(pw.length<8){err.textContent='Passphrase needs at least 8 characters.';return}
+  btn.disabled=true;
+  try{
+    if(!vault){
+      if(pw!==$('#pw2').value){err.textContent='The two passphrases do not match.';return}
+      vault=await createVault(pw);localStorage.setItem(VK,JSON.stringify(vault));
+    }
+    await openVault(vault,pw);wrong=0;enter();
+  }catch{wrong++;await new Promise(r=>setTimeout(r,Math.min(wrong*800,5000)));err.textContent='Wrong passphrase. Try again.'}
+  finally{btn.disabled=false}}
+function enter(){$('#lock').hidden=true;$('#app').hidden=false;$('#pubBox').textContent=JSON.stringify(vault.pub);bump();renderHis();selectTab('gen')}
+function bump(){clearTimeout(idle);idle=setTimeout(()=>{if(priv)showLock()},5*60*1000)}
+['pointerdown','keydown'].forEach(e=>addEventListener(e,()=>priv&&bump()));
+
+/* ---------- tabs ---------- */
+const TABS=[['gen','Create'],['ver','Check'],['his','History'],['set','Settings']];
+function selectTab(id){TABS.forEach(([k])=>{$('#p-'+k).hidden=k!==id;$('#tab-'+k).setAttribute('aria-selected',k===id)});scrollTo(0,0);if(id==='his')renderHis()}
+TABS.forEach(([k,n])=>$('#tabs').append(el('button',{id:'tab-'+k,role:'tab','aria-selected':'false',onclick:()=>selectTab(k)},svg(ICON[k]),n)));
+
+/* ---------- generate ---------- */
+let cur=null;
+const history=()=>JSON.parse(localStorage.getItem(HK)||'[]');
+const saveHis=l=>localStorage.setItem(HK,JSON.stringify(l.slice(0,500)));
+const cleanMid=v=>v.toUpperCase().replace(/[^A-Z0-9-]/g,'');
+$('#mid').addEventListener('input',e=>{
+  e.target.value=cleanMid(e.target.value);const m=e.target.value,h=$('#midHint');h.className='hint';
+  const prev=history().find(x=>x.mid===m);
+  if(prev){h.className='hint wn';h.textContent=`Already issued on ${prev.issued} (${PLANS[prev.plan]}). This will be a renewal.`}
+  else if(m&&!MID_RE.test(m)){h.className='hint bad';h.textContent='Format: VELO-XXXX-XXXX'}else h.textContent='Format: VELO-XXXX-XXXX'});
+$('#plan').addEventListener('change',e=>$('#daysBox').hidden=e.target.value!=='4');
+$('#genBtn').addEventListener('click',async()=>{
+  const shop=$('#shop').value.trim()||'Customer', phone=normPhone($('#phone').value), mid=$('#mid').value.trim(), plan=+$('#plan').value;
+  if(!MID_RE.test(mid))return toast('Machine ID must look like VELO-8A4F-9C21',1);
+  let days=PDAYS[plan];
+  if(plan===4){days=parseInt($('#days').value,10);if(!(days>=1&&days<=3650))return toast('Custom days must be between 1 and 3650',1)}
+  const today=Math.floor(Date.now()/864e5), exp=days==null?65535:today+days-EPOCH;
+  if(exp>65534)return toast('Expiry date is out of range',1);
+  const p=new Uint8Array(12);p[0]=1;p[1]=plan;p[2]=exp>>8;p[3]=exp&255;p.set(await midHash(mid),4);
+  const sig=new Uint8Array(await S.sign({name:'ECDSA',hash:'SHA-256'},priv,p)), all=new Uint8Array(76);all.set(p);all.set(sig,12);
+  const key='VELO-'+b32e(all).match(/.{1,5}/g).join('-');
+  const expStr=days==null?'Never':fmtDate(new Date((exp+EPOCH)*864e5));
+  cur={shop,phone,mid,plan,exp:expStr,key,issued:fmtDate(new Date())};
+  const l=history();l.unshift(cur);saveHis(l);
+  $('#result').hidden=false;$('#resShop').textContent=shop;$('#resKey').textContent=key;
+  const b=$('#resBadge');b.className='badge ok';b.textContent=days==null?'Lifetime':'Valid until '+expStr;
+  $('#result').scrollIntoView({behavior:'smooth',block:'center'});toast('Key created')});
+const waMsg=r=>`*VELO POS LICENSE*\nCustomer: ${r.shop}\nMachine ID: ${r.mid}\nPlan: ${PLANS[r.plan]}${r.exp==='Never'?'':' (until '+r.exp+')'}\n\nActivation key:\n${r.key}\n\nOpen Velo POS > Settings > License Key > Paste and Activate.`;
+const sendWa=r=>window.open(`https://wa.me/${r.phone}?text=${encodeURIComponent(waMsg(r))}`,'_blank','noopener');
+$('#copyBtn').onclick=()=>cur&&copy(cur.key,'Key copied');
+$('#waBtn').onclick=()=>cur&&sendWa(cur);
+if(navigator.share){$('#shareBtn').hidden=false;$('#shareBtn').onclick=()=>cur&&navigator.share({text:waMsg(cur)}).catch(()=>{})}
+
+/* ---------- verify ---------- */
+async function checkKey(key,mid){
+  const s=key.toUpperCase().replace(/^\s*VELO-/,'').replace(/[^A-Z2-7]/g,'');let u;
+  try{u=b32d(s)}catch{return{ok:false,why:'Key has invalid characters.'}}
+  if(u.length!==76)return{ok:false,why:'Key length is wrong. Copy the whole key.'};
+  const p=u.slice(0,12), sig=u.slice(12);
+  if(!await S.verify({name:'ECDSA',hash:'SHA-256'},pubKey,sig,p))return{ok:false,why:'Signature is not valid for this vendor key.'};
+  const h=await midHash(mid);if(h.some((x,i)=>x!==p[4+i]))return{ok:false,why:'Key is genuine but belongs to a different Machine ID.'};
+  const e=(p[2]<<8)|p[3], d=e===65535?null:new Date((e+EPOCH)*864e5);
+  return{ok:true,plan:p[1],date:d,expired:d?Date.now()>d.getTime()+864e5:false}}
+$('#vMid').addEventListener('input',e=>e.target.value=cleanMid(e.target.value));
+$('#vBtn').onclick=async()=>{
+  const o=$('#vOut'),mid=$('#vMid').value.trim();
+  if(!MID_RE.test(mid)){o.className='hint bad';o.textContent='Enter a Machine ID like VELO-8A4F-9C21.';return}
+  const r=await checkKey($('#vKey').value,mid);
+  if(!r.ok){o.className='hint bad';o.textContent='✗ '+r.why;return}
+  o.className=r.expired?'hint bad':'hint';o.style.color=r.expired?'':'var(--ok)';
+  o.textContent=`${r.expired?'✗ Expired':'✓ Valid'} · ${PLANS[r.plan]} · ${r.date?'until '+fmtDate(r.date):'never expires'}`};
+
+/* ---------- history ---------- */
+function renderHis(){
+  const box=$('#hisList'),q=$('#q').value.trim().toLowerCase(),all=history();box.replaceChildren();
+  const list=all.filter(r=>!q||[r.shop,r.phone,r.mid].join(' ').toLowerCase().includes(q));
+  if(!list.length){box.append(el('div',{class:'empty'},all.length?'No matches.':'No keys yet. Create your first license in the Create tab.'));return}
+  list.forEach(r=>box.append(el('div',{class:'item'},
+    el('div',{class:'t'},el('b',{},r.shop),el('div',{class:'sub mono'},r.mid),el('div',{class:'sub'},`${PLANS[r.plan]} · issued ${r.issued} · expires ${r.exp}`)),
+    el('button',{'aria-label':'Copy key',onclick:()=>copy(r.key,'Key copied')},'Copy'),
+    el('button',{'aria-label':'Send on WhatsApp',class:'wa',onclick:()=>sendWa(r)},'Send'),
+    el('button',{'aria-label':'Delete',class:'danger',onclick:()=>{if(confirm('Delete this record? The key itself will still work.')){saveHis(history().filter(x=>x.key!==r.key));renderHis()}}},'✕'))))}
+$('#q').addEventListener('input',renderHis);
+$('#expJson').onclick=()=>download('velo-issued-keys.json',JSON.stringify(history(),null,2),'application/json');
+const csvSafe=v=>{v=String(v??'');if(/^[=+\-@]/.test(v))v="'"+v;return '"'+v.replace(/"/g,'""')+'"'};
+$('#expCsv').onclick=()=>download('velo-issued-keys.csv','Shop,Phone,MachineID,Plan,Issued,Expires,Key\n'+history().map(r=>[r.shop,r.phone,r.mid,PLANS[r.plan],r.issued,r.exp,r.key].map(csvSafe).join(',')).join('\n'),'text/csv');
+$('#impBtn').onclick=()=>$('#impFile').click();
+$('#impFile').onchange=async e=>{try{const inc=JSON.parse(await e.target.files[0].text()),l=history(),seen=new Set(l.map(x=>x.key));
+  const add=inc.filter(x=>x&&typeof x.key==='string'&&typeof x.mid==='string'&&!seen.has(x.key)).map(x=>({shop:String(x.shop||'Customer'),phone:String(x.phone||''),mid:x.mid,plan:+x.plan||0,exp:String(x.exp||''),key:x.key,issued:String(x.issued||'')}));
+  saveHis(l.concat(add).sort((a,b)=>b.issued.localeCompare(a.issued)));renderHis();toast(`Imported ${add.length} records`)}catch{toast('That file is not a valid history export',1)}e.target.value=''};
+
+/* ---------- settings ---------- */
+const setTheme=t=>{document.documentElement.dataset.theme=t;localStorage.setItem('velo_theme',t);$('#theme').value=t;document.querySelector('meta[name=theme-color]').content=t==='dark'?'#0A1020':'#F2F5FB'};
+$('#theme').onchange=e=>setTheme(e.target.value);
+setTheme(localStorage.getItem('velo_theme')||(matchMedia('(prefers-color-scheme:light)').matches?'light':'dark'));
+$('#copyPub').onclick=()=>copy(JSON.stringify(vault.pub),'Public key copied');
+$('#copySnip').onclick=()=>copy(`// Velo POS: license check (public key only)
+const VELO_PUBLIC_KEY=${JSON.stringify(vault.pub)};
+async function veloVerify(key,machineId){
+  const A='ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+  const s=key.toUpperCase().replace(/^\\s*VELO-/,'').replace(/[^A-Z2-7]/g,'');
+  let v=0,b=0;const o=[];
+  for(const c of s){v=(v<<5)|A.indexOf(c);b+=5;if(b>=8){o.push((v>>>(b-8))&255);b-=8}}
+  if(o.length!==76)return{ok:false};
+  const u=Uint8Array.from(o),p=u.slice(0,12),sig=u.slice(12);
+  const k=await crypto.subtle.importKey('jwk',VELO_PUBLIC_KEY,{name:'ECDSA',namedCurve:'P-256'},false,['verify']);
+  if(!await crypto.subtle.verify({name:'ECDSA',hash:'SHA-256'},k,sig,p))return{ok:false};
+  const h=new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(machineId.trim().toUpperCase()))).slice(0,8);
+  if(h.some((x,i)=>x!==p[4+i]))return{ok:false};
+  const e=(p[2]<<8)|p[3],exp=e===65535?null:new Date((e+18262)*864e5);
+  return{ok:true,plan:p[1],expires:exp,expired:exp?Date.now()>exp.getTime()+864e5:false};
+}
+// Tip: also store the latest date the POS has seen and treat an earlier clock as expired.`,'POS check code copied');
+$('#bkBtn').onclick=()=>download(`velo-vault-backup-${fmtDate(new Date())}.json`,JSON.stringify(vault),'application/json');
+$('#rsBtn').onclick=()=>$('#rsFile').click();
+$('#rsFile').onchange=async e=>{try{const v=JSON.parse(await e.target.files[0].text());if(!(v.v===2&&v.salt&&v.iv&&v.ct&&v.pub))throw 0;
+  const pw=prompt('Enter the passphrase of this backup');if(!pw)return;await openVault(v,pw);vault=v;localStorage.setItem(VK,JSON.stringify(v));$('#pubBox').textContent=JSON.stringify(v.pub);toast('Vault restored')}
+  catch{toast('Could not restore: wrong file or passphrase',1)}e.target.value=''};
+$('#wipeBtn').onclick=()=>{if(confirm('Delete the vault from this device? Download a backup first.')&&prompt('Type DELETE to confirm')==='DELETE'){localStorage.removeItem(VK);vault=null;showLock()}};
+$('#lockNow').onclick=showLock;
+$('#lockBtn').onclick=doLock;
+$('#lock').addEventListener('keydown',e=>e.key==='Enter'&&doLock());
+
+/* ---------- install + boot ---------- */
+let dip;addEventListener('beforeinstallprompt',e=>{e.preventDefault();dip=e;$('#instBtn').hidden=false});
+$('#instBtn').onclick=async()=>{if(dip){dip.prompt();await dip.userChoice;dip=null;$('#instBtn').hidden=true}};
+if(/iphone|ipad/i.test(navigator.userAgent)&&!navigator.standalone)$('#iosHint').hidden=false;
+if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+if(!S){document.body.textContent='This app needs HTTPS (or localhost) to use secure cryptography.'}else showLock();
+</script>
+</body>
+</html>
